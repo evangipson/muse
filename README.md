@@ -1,7 +1,7 @@
-# jstory
-jStory will generate you a story using javascript.
+# muse
+Muse will generate you a story using javascript.
 
-| jStory Readme |
+| Muse Readme |
 |---|
 | [Getting Started](#getting-started) |
 | [Built With](#built-with) |
@@ -11,9 +11,9 @@ jStory will generate you a story using javascript.
 | [License](#license) |
 
 ## Getting Started
-If you want a local copy of jStory, just fork the repository, and set this up in a folder somewhere on your computer. After that, run the gulpfile.js to build the JavaScript and the SCSS, then you can use the index.html to view the web page.
+If you want a local copy of Muse, just fork the repository, and set this up in a folder somewhere on your computer. After that, run the gulpfile.js to build the JavaScript and the SCSS, then you can use the index.html to view the web page.
 
-You will have to create a new Firebase database and upload new configuration settings in jStory/src/js/db.js if you'd like to detach from the main database.
+You will have to create a new Firebase database and upload new configuration settings in muse/src/js/db.js if you'd like to detach from the main database.
 
 ## Built With
 * JavaScript
@@ -25,16 +25,16 @@ You will have to create a new Firebase database and upload new configuration set
 * Google Chrome
 
 ## Contributing
-Have a look at the [issues with jStory](https://github.com/evangipson/jstory/issues), and create a pull request containing your code so it can be reviewed be merged into the source!
+Have a look at the [issues with Muse](https://github.com/evangipson/muse/issues), and create a pull request containing your code so it can be reviewed be merged into the source!
 
 I will run all new javascript through [JSHint](http://jshint.com/) before merging into master.
 
 ## Versioning
-Chessy is maintained using a 3-digit versioning system, represented by:
+Muse is maintained using a 3-digit versioning system, represented by:
 ```
 [Major Version].[Minor Version].[Update]
 ```
-For instance, the first stable build of jStory will be 1.0.0.
+For instance, the first stable build of Muse will be 1.0.0.
 
 ## Authors
 * **Evan Gipson** - *[Evan's Website](https://evangipson.com/)*
@@ -42,7 +42,7 @@ For instance, the first stable build of jStory will be 1.0.0.
 ## License
 This project is licensed under the MIT License.
 ```
-Copyright (c) 2016 EVAN GIPSON
+Copyright (c) 2017 EVAN GIPSON
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
