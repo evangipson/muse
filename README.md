@@ -1,5 +1,5 @@
 # muse
-Muse will generate you a story using javascript.
+Muse is a **M**ulti **U**ser **S**ound **E**nvironment that does it's best to keep everyone's ears happy.
 
 | Muse Readme |
 |---|
