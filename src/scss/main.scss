@@ -1,4 +1,110 @@
-h1 {
+// Variables
+$loginFormWidth: 14rem;
+$loginFormCurvature: 0.3rem;
+$animationTime: 0.25s;
+$textColor: #ffffff;
+$mainColor: #e2a9ce;
+$secondaryColor: #597ab3;
+$tertiaryColor: #e6c7d6;
+$backgroundColor: #eee1df;
+$sectionVerticalSpace: 4rem;
+$black: #454545;
+
+// Mixins
+// For media queries
+@mixin respond($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+/* To give elements breathing
+ * space above them in an organized
+ * and DRY manner. */
+@mixin topspace($size) {
+    margin: $size auto 0;
+}
+
+// Basic HTML element styles
+body {
+    font-size: 18px;
+}
+
+body, label {
+    background: $tertiaryColor;
+}
+
+body, input, button {
+    font-family: sans-serif;
+}
+
+input, button, label, h1, h2, p {
+    color: $textColor;
+}
+
+input, button, label, h1, h2 {
+    font-weight: bold;
+}
+
+h1, h2 {
+    @include topspace($sectionVerticalSpace * 0.5);
+}
+
+// Form styles
+form {
+    // Give the labels room to animate and breathe
+    @include topspace($sectionVerticalSpace);
+}
+
+button, label, input {
+    width: $loginFormWidth;
+    display: block;
+}
+
+button, label, .wrapper {
+    margin: auto;
+}
+
+input, button {
+    background: $mainColor;
+    border: none;
+    cursor: pointer;
+}
+
+input, button, label {
+    padding: 0.5rem;
+    font-size: 1rem;
+    &:focus {
+        outline: none;
+        background: darken($mainColor, 10%);
+        box-shadow: 0 0 2pt 1pt $mainColor;
+    }
+}
+
+input {
+    border-radius: $loginFormCurvature;
+    margin: 0.5rem auto;
+    &:focus + label, &.filled + label {
+        top: -5.2rem;
+    }
+}
+
+label {
+    position: relative;
+    top: -3rem;
+    transition: top $animationTime ease;
+    /* We don't want to click the label,
+     * we want to click the input behind
+     * the label. */
+    pointer-events: none;
+}
+
+button {
+    padding: 0.8rem 0.5rem;
+    transition: background $animationTime ease;
+}
+
+// Custom classes
+.wrapper {
     text-align: center;
-    margin: 1rem auto;
 }

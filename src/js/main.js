@@ -17,10 +17,36 @@ var MUSE = (function() {
         return Math.floor(Math.random() * (max - min) + min);
     };
     /**
+     * Controls the classes applied to the form
+     * for front-end goodness.
+     * @param {HTMLElement} input
+     */
+    let handleFormAnimation = function() {
+        document.addEventListener("keyup", addFilledClassToInputs);
+    }
+    /**
+     * Helper function for handleFormAnimation,
+     * will check all text inputs for any value,
+     * then add the .filled class (or remove it)
+     * based on precense of a value.
+     */
+    let addFilledClassToInputs = function() {
+        // Grab each input
+        let inputList = document.getElementsByTagName("input");
+        for(let input in inputList) {
+            if(inputList[input].value !== "") {
+                inputList[input].classList.add("filled");
+            }
+            else {
+                inputList[input].classList.remove("filled");
+            }
+        }
+    }
+    /**
      * Function for initialization of the MUSE module
      */
     museModule.init = function() {
-        // Stuff...
+        handleFormAnimation();
     }
     // Give back the module
     return museModule;
